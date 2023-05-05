@@ -1,0 +1,8 @@
+{
+  "name": "samurai-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Danhalf/samurai-backend.git",
+  "author": "Danhalf <danhel@rocketmail.com>",
+  "license": "MIT"
+}
