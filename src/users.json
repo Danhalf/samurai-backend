@@ -1,0 +1,86 @@
+[
+    {
+      "id": 0,
+      "name": "Phillips Ballard",
+      "gender": "male",
+      "country": "Moldova",
+      "email": "SargentUY@temail.com"
+    },
+    {
+      "id": 1,
+      "name": "Hester Mason",
+      "gender": "male",
+      "country": "Turkmenistan",
+      "email": "AndrewsLC@temail.com"
+    },
+    {
+      "id": 2,
+      "name": "Amelia Rhodes",
+      "gender": "female",
+      "country": "St. Helena",
+      "email": "AnthonyTK@temail.com"
+    },
+    {
+      "id": 3,
+      "name": "Francesca Butler",
+      "gender": "female",
+      "country": "Cuba",
+      "email": "PetersenGR@temail.com"
+    },
+    {
+      "id": 4,
+      "name": "Weaver Reeves",
+      "gender": "male",
+      "country": "Gambia",
+      "email": "McdanielIO@temail.com"
+    },
+    {
+      "id": 5,
+      "name": "Buckley Roy",
+      "gender": "male",
+      "country": "Malawi",
+      "email": "TannerAM@temail.com"
+    },
+    {
+      "id": 6,
+      "name": "Estrada Dodson",
+      "gender": "male",
+      "country": "Seychelles",
+      "email": "RodriquezCC@temail.com"
+    },
+    {
+      "id": 7,
+      "name": "Camacho Conley",
+      "gender": "male",
+      "country": "Eritrea",
+      "email": "ScottCM@temail.com"
+    },
+    {
+      "id": 8,
+      "name": "Murray Barrett",
+      "gender": "male",
+      "country": "Trinidad and Tobago",
+      "email": "WhitakerPM@temail.com"
+    },
+    {
+      "id": 9,
+      "name": "Fitzgerald Edwards",
+      "gender": "male",
+      "country": "Bermuda",
+      "email": "FischerGN@temail.com"
+    },
+    {
+      "id": 10,
+      "name": "Wilkins Britt",
+      "gender": "male",
+      "country": "Ghana",
+      "email": "SantiagoSZ@temail.com"
+    },
+    {
+      "id": 11,
+      "name": "Boyd Barry",
+      "gender": "male",
+      "country": "Qatar",
+      "email": "NewtonAI@temail.com"
+    }
+  ]
