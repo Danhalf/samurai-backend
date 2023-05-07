@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 8080
 const HOST = process.env.HOST
 
 app.get('/', (req: Request, res: Response) => {
-    let testMessage = "Current message"
+    let testMessage = `Running on http://${HOST}:${PORT}`;
     res.send(testMessage)
 })
 
