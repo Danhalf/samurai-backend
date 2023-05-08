@@ -1,6 +1,13 @@
 import express, {Request, Response} from "express"
 import usersDB from "./users.json"
+import bodyParser from "body-parser"
+
 const app = express()
+
+const middlewareParser = bodyParser();
+
+app.use(middlewareParser);
+
 const PORT = process.env.PORT || 3000
 const HOST = process.env.HOST
 
@@ -22,6 +29,20 @@ app.get('/users/:id', (req: Request, res: Response) => {
     const {id} = req.params;
     const user = users.find(user => user.id === Number(id))
     res.send(user)
+})
+
+app.post('/users', (req: Request, res: Response) => {
+    const {name, email, gender, country}: IUser = req.body;
+    const id = new Date().getTime().toString(16);
+    const newUser = {
+        id,
+        name,
+        email,
+        gender,
+        country
+    }
+    users = [...users, newUser]
+    res.status(201).send(newUser);
 })
 
 app.delete('/users/:id', (req: Request, res: Response) => {
