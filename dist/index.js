@@ -22,7 +22,7 @@ app.get('/users/:id', (req, res) => {
 });
 app.post('/users', (req, res) => {
     const { name, email, gender, country } = req.body;
-    const id = new Date().getTime().toString(16);
+    const id = new Date().getTime().toString(2);
     const newUser = {
         id,
         name,
@@ -32,6 +32,21 @@ app.post('/users', (req, res) => {
     };
     users = [...users, newUser];
     res.status(201).send(newUser);
+});
+app.put('/users/:id', (req, res) => {
+    const { name, email, gender, country } = req.body;
+    const { id } = req.params;
+    let user = users.find(u => u.id === Number(id));
+    if (user) {
+        user.name = name;
+        user.gender = gender;
+        user.email = email;
+        user.country = country;
+        res.send(user);
+    }
+    else {
+        res.send(404);
+    }
 });
 app.delete('/users/:id', (req, res) => {
     const { id } = req.params;
