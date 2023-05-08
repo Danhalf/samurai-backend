@@ -1,5 +1,5 @@
 import express, {Request, Response} from "express"
-import users from "./users.json"
+import usersDB from "./users.json"
 const app = express()
 const PORT = process.env.PORT || 3000
 const HOST = process.env.HOST
@@ -12,6 +12,7 @@ interface IUser {
     "email": string
 }
 
+let users: IUser[] = [...usersDB];
 
 app.get('/users', (req: Request, res: Response) => {
     res.send(users)
@@ -21,6 +22,17 @@ app.get('/users/:id', (req: Request, res: Response) => {
     const {id} = req.params;
     const user = users.find(user => user.id === Number(id))
     res.send(user)
+})
+
+app.delete('/users/:id', (req: Request, res: Response) => {
+    const {id} = req.params;
+    const prevLenght = users.length;
+    users = users.filter(user => user.id !== Number(id))
+    if (prevLenght > users.length) {
+        res.send(204)
+    } else {
+        res.send(404)
+    }
 })
 
 app.get('/find', (req: Request, res: Response) => {
